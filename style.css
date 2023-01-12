@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+:root {
+    --text-color: white;
+    --bg-url:url(./assets/themes/darkbg.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.2);
+    --surface-color:rgba(255, 255, 255, 0.1);
+    --surface-color-hover:rgba(0, 0, 0, 0.1);
+    --switch-icon: url(./assets/themes/darkswitch.svg)
+}
+
+.light {
+    --text-color: black;
+    --bg-url:url(./assets/themes/lightbg.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.2);
+    --surface-color:rgba(0, 0, 0, 0.1);
+    --surface-color-hover:rgba(255, 255, 255, 0.1);
+    --switch-icon: url(./assets/themes/lightswitch.svg)
+
+}
+
+body {
+    background:var(--bg-url) no-repeat top center/cover;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Anek Bangla', sans-serif;
+
+}
+
+img {
+    margin-top: 20px;
+    height: 20vh;
+    border-radius: 50%;
+    border: 4px white solid;
+  }
+#profile {
+    font-weight: bold;
+    font-size: 22px;
+    padding: 24px;
+}
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 0 auto;
+
+}
+
+#switch button {
+width: 32px;
+height: 32px;
+background:white var(--switch-icon) no-repeat center;
+border: 0;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 0;
+z-index: 1;
+transform: translateY(-50%);
+padding: 20px;
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: flex;
+    /*  */
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+}
+li{
+    margin-bottom: 12px;
+}
+ul li a{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    width: 50vw;
+    border: 1px solid blue;
+    background: var(--surface-color);
+    border: 2px solid var(--stroke-color);
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all .7s;
+}
+
+ul li a:hover {
+    border: 3px solid var(--text-color);
+    background: var(--surface-color-hover);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+#social {
+    padding: 40px 0px 0px 0px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-size: 5vh;
+    transition: all .6s;
+    
+}
+
+
+#social ion-icon:hover {
+    border-radius: 50%;
+
+    font-size: 7vh;
+    transition: 0.6s;
+    padding: 16px;
+    background:var(--stroke-color);
+    border: 1px solid var(--text-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+}
+
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
